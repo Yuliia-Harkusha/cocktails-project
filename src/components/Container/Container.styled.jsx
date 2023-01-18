@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const ContainerWrapper = styled.div`
   width: 320px;
   margin: 0 auto;
-  padding: ${props => props.theme.spacing(3)};
+  padding: ${props => props.theme.spacing(2)};
 
   @media screen and (min-width: 450px) {
     width: 420px;
