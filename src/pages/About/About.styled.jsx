@@ -19,6 +19,7 @@ export const Image = styled.img`
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  margin-bottom: ${props => props.theme.spacing(6)};
 
   @media screen and (min-width: 768px) {
     width: 550px;

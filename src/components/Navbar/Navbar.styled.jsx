@@ -8,6 +8,10 @@ export const Navigation = styled.nav`
   width: fit-content;
   background-color: #fff;
   box-shadow: ${props => props.theme.shadows.lightShadow};
+
+  @media screen and (min-width: 1240px) {
+    width: auto;
+  }
 `;
 
 export const NavigationDiv = styled.div`
