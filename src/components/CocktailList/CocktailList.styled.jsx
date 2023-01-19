@@ -21,7 +21,7 @@ export const MainList = styled.ul`
   gap: ${props => props.theme.spacing(6)};
   margin: 0 auto;
 
-  @media screen and (min-width: 450px) {
+  @media screen and (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 

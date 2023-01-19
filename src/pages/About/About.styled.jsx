@@ -9,6 +9,8 @@ export const Heading = styled.h3`
 export const Text = styled.p`
   margin-bottom: ${props => props.theme.spacing(3)};
   font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 1.3px;
   color: ${props => props.theme.colors.gray};
 `;
 
