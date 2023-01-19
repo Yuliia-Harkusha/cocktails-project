@@ -3,7 +3,7 @@ import { FaCocktail } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 
 export const Navigation = styled.nav`
-  width: 95vw;
+  width: 100vw;
   max-width: 1170px;
   display: flex;
   align-items: center;
@@ -34,15 +34,17 @@ export const CocktailIcon = styled(FaCocktail)`
 
 export const HeadLink = styled(Link)`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  gap: ${props => props.theme.spacing(1)};
   padding: ${props => props.theme.spacing(2)};
   font-weight: 500;
 
   color: ${props => props.theme.colors.accent};
 
-  @media screen and (min-width: 768px) {
-    font-weight: 700;
+  @media screen and (min-width: 600px) {
+    align-items: flex-end;
     gap: ${props => props.theme.spacing(3)};
+    font-weight: 700;
   }
 `;
 
