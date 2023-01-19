@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {
   CocktailIcon,
   Navigation,
+  NavigationDiv,
   NavList,
   NavItem,
   HeadLink,
@@ -21,16 +22,18 @@ export const Navbar = () => {
 
   return (
     <Navigation>
-      <HeadLink to="/">
-        <CocktailIcon />
-        <h2>TheCocktailDB</h2>
-      </HeadLink>
-      <NavList>
-        <li>{matches && <NavItem to="/">Home</NavItem>}</li>
-        <li>
-          <NavItem to="/about">About</NavItem>
-        </li>
-      </NavList>
+      <NavigationDiv>
+        <HeadLink to="/">
+          <CocktailIcon />
+          <h2>TheCocktailDB</h2>
+        </HeadLink>
+        <NavList>
+          <li>{matches && <NavItem to="/">Home</NavItem>}</li>
+          <li>
+            <NavItem to="/about">About</NavItem>
+          </li>
+        </NavList>
+      </NavigationDiv>
     </Navigation>
   );
 };

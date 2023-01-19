@@ -3,17 +3,24 @@ import { FaCocktail } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 
 export const Navigation = styled.nav`
-  width: 100vw;
-  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: #fff;
+  box-shadow: ${props => props.theme.shadows.lightShadow};
+`;
+
+export const NavigationDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
+  max-width: 1170px;
+  margin: 0 auto;
   padding-top: ${props => props.theme.spacing(1)};
   padding-bottom: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(4)};
   padding-left: ${props => props.theme.spacing(4)};
-  box-shadow: ${props => props.theme.shadows.lightShadow};
-  background-color: #fff;
 
   @media screen and (min-width: 768px) {
     /* width: auto; */
