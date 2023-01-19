@@ -7,7 +7,7 @@ export const Heading = styled.h3`
 `;
 
 export const Text = styled.p`
-  margin-bottom: ${props => props.theme.spacing(3)};
+  margin-bottom: ${props => props.theme.spacing(4)};
   font-weight: 500;
   line-height: 1.8;
   letter-spacing: 1.3px;
@@ -18,7 +18,7 @@ export const Image = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
+  width: 300px;
 
   @media screen and (min-width: 768px) {
     width: 550px;

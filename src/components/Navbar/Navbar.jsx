@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
 import {
   CocktailIcon,
@@ -6,9 +6,19 @@ import {
   NavList,
   NavItem,
   HeadLink,
-} from "./Navbar.styled";
+} from './Navbar.styled';
 
 export const Navbar = () => {
+  const [matches, setMatches] = useState(
+    window.matchMedia('(min-width: 600px)').matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia('(min-width: 600px)')
+      .addEventListener('change', e => setMatches(e.matches));
+  }, []);
+
   return (
     <Navigation>
       <HeadLink to="/">
@@ -16,9 +26,7 @@ export const Navbar = () => {
         <h2>TheCocktailDB</h2>
       </HeadLink>
       <NavList>
-        <li>
-          <NavItem to="/">Home</NavItem>
-        </li>
+        <li>{matches && <NavItem to="/">Home</NavItem>}</li>
         <li>
           <NavItem to="/about">About</NavItem>
         </li>

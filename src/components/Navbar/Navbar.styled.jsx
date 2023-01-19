@@ -30,16 +30,11 @@ export const CocktailIcon = styled(FaCocktail)`
   :focus {
     color: ${props => props.theme.colors.hover};
   }
-
-  @media screen and (min-width: 768px) {
-    font-size: ${props => props.theme.fontSizes.large};
-  }
 `;
 
 export const HeadLink = styled(Link)`
   display: flex;
   align-items: flex-end;
-  gap: ${props => props.theme.spacing(1)};
   padding: ${props => props.theme.spacing(2)};
   font-weight: 500;
 
