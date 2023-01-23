@@ -9,6 +9,10 @@ export const Navigation = styled.nav`
   background-color: #fff;
   box-shadow: ${props => props.theme.shadows.lightShadow};
 
+  @media screen and (min-width: 360px) {
+    width: 100vw;
+  }
+
   @media screen and (min-width: 1240px) {
     width: auto;
   }
@@ -25,6 +29,10 @@ export const NavigationDiv = styled.div`
   padding-bottom: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(4)};
   padding-left: ${props => props.theme.spacing(4)};
+
+  @media screen and (min-width: 360px) {
+    width: 90vw;
+  }
 
   @media screen and (min-width: 768px) {
     /* width: auto; */
@@ -82,8 +90,6 @@ export const NavItem = styled(NavLink)`
   :hover,
   :focus {
     color: ${props => props.theme.colors.hover};
-    background-color: ${props => props.theme.colors.mainBackground};
-    border-radius: ${props => props.theme.radii.primary};
   }
   &.active {
     color: ${props => props.theme.colors.accent};
@@ -91,5 +97,10 @@ export const NavItem = styled(NavLink)`
 
   @media screen and (min-width: 600px) {
     font-size: ${props => props.theme.fontSizes.medLarge};
+    :hover,
+    :focus {
+      background-color: ${props => props.theme.colors.mainBackground};
+      border-radius: ${props => props.theme.radii.primary};
+    }
   }
 `;
