@@ -19,7 +19,7 @@ export const DrinkWrapper = styled.div`
   text-align: left;
   margin-bottom: ${props => props.theme.spacing(6)};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: ${props => props.theme.spacing(6)};
@@ -32,7 +32,7 @@ export const Image = styled.img`
   border-radius: ${props => props.theme.radii.primary};
   margin-bottom: ${props => props.theme.spacing(6)};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     margin-bottom: 0;
   }
 `;

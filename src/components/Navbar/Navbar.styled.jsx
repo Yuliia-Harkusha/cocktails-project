@@ -71,7 +71,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled(NavLink)`
-  font-size: ${props => props.theme.fontSizes.medLarge};
+  font-size: ${props => props.theme.fontSizes.medium};
   padding-top: ${props => props.theme.spacing(2)};
   padding-bottom: ${props => props.theme.spacing(2)};
   padding-right: ${props => props.theme.spacing(3)};
@@ -87,5 +87,9 @@ export const NavItem = styled(NavLink)`
   }
   &.active {
     color: ${props => props.theme.colors.accent};
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: ${props => props.theme.fontSizes.medLarge};
   }
 `;
