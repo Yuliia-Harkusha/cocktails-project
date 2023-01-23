@@ -13,9 +13,9 @@ export const Navigation = styled.nav`
     width: 100vw;
   }
 
-  @media screen and (min-width: 1240px) {
+  /* @media screen and (min-width: 1230px) {
     width: auto;
-  }
+  } */
 `;
 
 export const NavigationDiv = styled.div`
