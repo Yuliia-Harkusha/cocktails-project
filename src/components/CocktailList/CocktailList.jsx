@@ -6,6 +6,7 @@ import { Message, Heading, MainList } from './CocktailList.styled';
 
 export const CocktailList = () => {
   const { cocktails } = useGlobalContext();
+  // console.log(cocktails);
 
   if (cocktails.length < 1) {
     return <Message>No cocktails matched your search criteria</Message>;
@@ -13,7 +14,7 @@ export const CocktailList = () => {
   return (
     <section>
       <Heading>Cocktails</Heading>
-      <Filter />
+      <Filter></Filter>
       <MainList>
         {cocktails.map(item => {
           return <Cocktail key={item.id} {...item} />;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FilterBox } from './Filter.styled';
+import { FilterBox, FilterItem, Input, Label } from './Filter.styled';
 
 export const Filter = () => {
   const [drinkType, setDrinkType] = useState();
@@ -9,27 +9,27 @@ export const Filter = () => {
 
   return (
     <FilterBox>
-      <div>
-        <input
+      <FilterItem>
+        <Input
           type="radio"
           id="alco"
           value="Alcoholic"
           checked={drinkType === 'Alcoholic'}
           onChange={handleChange}
         />
-        <label htmlFor="alco">Alcoholic</label>
-      </div>
+        <Label htmlFor="alco">Alcoholic</Label>
+      </FilterItem>
 
-      <div>
-        <input
+      <FilterItem>
+        <Input
           type="radio"
           id="nonAlco"
           value="Non-Alcoholic"
           checked={drinkType === 'Non-Alcoholic'}
           onChange={handleChange}
         />
-        <label htmlFor="nonAlco">Non-Alcoholic</label>
-      </div>
+        <Label htmlFor="nonAlco">Non-Alcoholic</Label>
+      </FilterItem>
     </FilterBox>
   );
 };
