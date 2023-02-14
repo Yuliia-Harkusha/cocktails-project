@@ -4,8 +4,12 @@ export const FilterBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 25px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 460px) {
+    gap: 50px;
+  }
 `;
 
 export const FilterItem = styled.div`
@@ -16,7 +20,7 @@ export const FilterItem = styled.div`
 export const Input = styled.input`
   appearance: none;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: 5px;
   display: inline-grid;
   place-content: center;
   width: 1.3em;
@@ -39,11 +43,20 @@ export const Input = styled.input`
   :checked::before {
     transform: scale(1);
   }
+
+  @media screen and (min-width: 460px) {
+    margin-right: 10px;
+  }
 `;
 
 export const Label = styled.label`
-  letter-spacing: 0.1rem;
-  font-size: ${props => props.theme.fontSizes.medium};
+  letter-spacing: 0.08rem;
+  font-size: ${props => props.theme.fontSizes.small};
   font-weight: 600;
   color: ${props => props.theme.colors.lightGray};
+
+  @media screen and (min-width: 460px) {
+    letter-spacing: 0.1rem;
+    font-size: ${props => props.theme.fontSizes.medium};
+  }
 `;
