@@ -1,7 +1,8 @@
-import React from "react";
-import { useGlobalContext } from "../../context";
-import { Cocktail } from "../Cocktail/Cocktail";
-import { Message, Heading, MainList } from "./CocktailList.styled";
+import React from 'react';
+import { useGlobalContext } from '../../context';
+import { Cocktail } from '../Cocktail/Cocktail';
+import { Filter } from 'components/Filter/Filter';
+import { Message, Heading, MainList } from './CocktailList.styled';
 
 export const CocktailList = () => {
   const { cocktails } = useGlobalContext();
@@ -12,8 +13,9 @@ export const CocktailList = () => {
   return (
     <section>
       <Heading>Cocktails</Heading>
+      <Filter />
       <MainList>
-        {cocktails.map((item) => {
+        {cocktails.map(item => {
           return <Cocktail key={item.id} {...item} />;
         })}
       </MainList>
