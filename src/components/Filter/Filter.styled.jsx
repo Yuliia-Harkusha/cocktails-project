@@ -23,17 +23,17 @@ export const Input = styled.input`
   margin-right: 5px;
   display: inline-grid;
   place-content: center;
-  width: 1.3em;
-  height: 1.3em;
-  border: 0.15em solid ${props => props.theme.colors.accent};
+  width: 20px;
+  height: 20px;
+  border: 3px solid ${props => props.theme.colors.accent};
   border-radius: 25%;
   color: ${props => props.theme.colors.hover};
   cursor: pointer;
 
   ::before {
     content: '';
-    width: 0.5em;
-    height: 0.5em;
+    width: 8px;
+    height: 8px;
     border-radius: 25%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;

@@ -11,7 +11,7 @@ export const Heading = styled.h2`
   text-align: center;
   text-transform: uppercase;
   color: ${props => props.theme.colors.gray};
-  margin-bottom: ${props => props.theme.spacing(8)};
+  margin-bottom: ${props => props.theme.spacing(6)};
   margin-top: ${props => props.theme.spacing(6)};
   letter-spacing: 0.2rem;
 `;

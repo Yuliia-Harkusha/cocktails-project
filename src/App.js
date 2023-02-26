@@ -6,7 +6,6 @@ import { Loader } from './components/Loader/Loader';
 
 import Home from './pages/Home/Home';
 
-// const HomePage = lazy(() => import("./pages/Home/Home"));
 const SingleCocktailPage = lazy(() =>
   import('./pages/SingleCocktail/SingleCocktail')
 );

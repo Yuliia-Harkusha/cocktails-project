@@ -6,7 +6,6 @@ import { Message, Heading, MainList } from './CocktailList.styled';
 
 export const CocktailList = () => {
   const { cocktails } = useGlobalContext();
-  // console.log(cocktails);
 
   if (cocktails.length < 1) {
     return <Message>No cocktails matched your search criteria</Message>;

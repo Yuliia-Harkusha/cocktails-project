@@ -1,19 +1,29 @@
-import React, { useState, useEffect, useContext, useCallback } from "react";
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [query, setQuery] = useState("a");
+  const [query, setQuery] = useState('a');
   const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = useCallback(async () => {
     try {
-      const response = await fetch(`${url}${query}`);
+      let response = await fetch(`${url}${query}`);
+      // if (url.includes('filter=alcoholic')) {
+      //   response = await fetch(
+      //     'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
+      //   );
+      // }
+      // if (url.includes('filter=non-alcoholic')) {
+      //   response = await fetch(
+      //     'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic'
+      //   );
+      // }
       const data = await response.json();
       const { drinks } = data;
       if (drinks) {
-        const newCocktails = drinks.map((item) => {
+        const newCocktails = drinks.map(item => {
           const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
             item;
 
