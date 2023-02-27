@@ -10,16 +10,7 @@ const AppProvider = ({ children }) => {
   const fetchDrinks = useCallback(async () => {
     try {
       let response = await fetch(`${url}${query}`);
-      // if (url.includes('filter=alcoholic')) {
-      //   response = await fetch(
-      //     'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
-      //   );
-      // }
-      // if (url.includes('filter=non-alcoholic')) {
-      //   response = await fetch(
-      //     'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic'
-      //   );
-      // }
+
       const data = await response.json();
       const { drinks } = data;
       if (drinks) {
